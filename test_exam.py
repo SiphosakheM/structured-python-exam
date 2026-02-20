@@ -1,4 +1,5 @@
 import unittest
+import importlib
 from exam import *
 
 class TestSection1DataStructures(unittest.TestCase):
@@ -44,7 +45,7 @@ class TestSection3Recursion(unittest.TestCase):
         self.assertAlmostEqual(compute_compound_interest_recursive(100, 0.1, 1), 110.0)
 
     def test_q2_audit(self):
-        self.assertEqual(sum_nested_integers([1, [2, [3]]]), 6)
+        self.assertEqual(deep_sum_audit([1, [2, [3]]]), 6)
 
     def test_q3_file_tree(self):
         tree = {'src': {'main.py': 'file'}}
